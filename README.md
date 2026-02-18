@@ -17,6 +17,16 @@ Official Python SDK for Tourist eSIM Partner API. Enable easy integration for re
 - Python 3.8+
 - requests >= 2.28.0
 
+## Testing
+
+Run the included test script to verify SDK functionality:
+
+```bash
+python3 test_sdk.py
+```
+
+This runs basic tests for SDK import, instantiation, structure, and resource modules without making actual API calls.
+
 ## Installation
 
 ```bash
