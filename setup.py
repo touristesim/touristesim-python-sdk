@@ -7,7 +7,7 @@ setup(
     name="touristesim-python-sdk",
     version="1.0.0",
     author="Tourist eSIM",
-    author_email="developers@touristesim.net",
+    author_email="tech@touristesim.net",
     description="Official Python SDK for Tourist eSIM Partner API",
     long_description=long_description,
     long_description_content_type="text/markdown",

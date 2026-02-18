@@ -142,6 +142,13 @@ except ResourceNotFoundException as e:
     print('Not found:', e)
 ```
 
+## Support
+
+For issues or questions:
+- **Technical Support**: tech@touristesim.net
+- **GitHub Issues**: https://github.com/touristesim/touristesim-python-sdk/issues
+- **Dashboard**: https://partners.touristesim.net
+
 ## License
 
 MIT - see LICENSE file
