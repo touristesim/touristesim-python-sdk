@@ -1,6 +1,6 @@
 # Tourist eSIM Python SDK
 
-Official Python SDK for Tourist eSIM Partner API. Enable easy integration for resellers and affiliates to manage eSIM plans, orders, and customer data.
+Official Python SDK for Tourist eSIM Partner API. Enable easy integration for resellers and partners to manage eSIM plans, orders, and customer data.
 
 ## Features
 
