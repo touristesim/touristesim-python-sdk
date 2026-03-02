@@ -117,6 +117,17 @@ class Plan(Model):
     def get_region(self) -> Optional[str]:
         return self.get('region')
 
+    def get_network(self) -> Optional[Dict[str, Any]]:
+        return self.get('network')
+
+    def get_network_operator(self) -> Optional[str]:
+        network = self.get_network()
+        return network.get('operator') if network else None
+
+    def get_network_speed(self) -> Optional[str]:
+        network = self.get_network()
+        return network.get('speed') if network else None
+
 
 class Country(Model):
     """Country Model"""
