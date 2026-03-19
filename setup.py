@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="touristesim-python-sdk",
+    name="touristesim_python_sdk",
     version="1.1.0",
     author="Tourist eSIM",
     author_email="tech@touristesim.net",
