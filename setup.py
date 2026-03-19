@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="touristesim-python-sdk",
-    version="1.0.0",
+    version="1.1.0",
     author="Tourist eSIM",
     author_email="tech@touristesim.net",
     description="Official Python SDK for Tourist eSIM Partner API",

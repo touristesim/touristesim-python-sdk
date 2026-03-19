@@ -215,3 +215,64 @@ class Esim(Model):
     
     def get_validity_end(self) -> Optional[str]:
         return self.get('validity_end')
+    
+    def get_coverage(self) -> Optional[Dict[str, Any]]:
+        """Get coverage information (countries, regions, type)"""
+        return self.get('coverage')
+    
+    def get_coverage_type(self) -> Optional[str]:
+        """Get coverage type: 'global', 'regional', or 'local'"""
+        coverage = self.get_coverage()
+        return coverage.get('type') if coverage else None
+    
+    def get_coverage_label(self) -> Optional[str]:
+        """Get human-readable coverage label"""
+        coverage = self.get_coverage()
+        return coverage.get('label') if coverage else None
+    
+    def get_coverage_countries(self) -> List[Dict[str, Any]]:
+        """Get list of covered countries"""
+        coverage = self.get_coverage()
+        if coverage:
+            return coverage.get('countries', [])
+        return []
+    
+    def get_coverage_region(self) -> Optional[Dict[str, Any]]:
+        """Get regional coverage information"""
+        coverage = self.get_coverage()
+        if coverage:
+            return coverage.get('region')
+        return None
+    
+    def get_network_operators(self) -> Optional[Dict[str, Any]]:
+        """Get network operator information"""
+        return self.get('network_operators')
+    
+    def get_network_operators_count(self) -> int:
+        """Get number of network operators"""
+        operators = self.get_network_operators()
+        return operators.get('count', 0) if operators else 0
+    
+    def get_network_operator_names(self) -> List[str]:
+        """Get list of network operator names"""
+        operators = self.get_network_operators()
+        return operators.get('operators', []) if operators else []
+    
+    def get_share_link(self) -> Optional[Dict[str, Any]]:
+        """Get share link information"""
+        return self.get('share_link')
+    
+    def get_share_link_slug(self) -> Optional[str]:
+        """Get share link slug"""
+        share_link = self.get_share_link()
+        return share_link.get('slug') if share_link else None
+    
+    def get_share_link_url(self) -> Optional[str]:
+        """Get share link URL"""
+        share_link = self.get_share_link()
+        return share_link.get('url') if share_link else None
+    
+    def get_share_link_pin(self) -> Optional[str]:
+        """Get share link PIN"""
+        share_link = self.get_share_link()
+        return share_link.get('pin') if share_link else None
